@@ -4,7 +4,8 @@ from PyPDF2 import PdfReader
 from pydantic import BaseModel
 from openai import OpenAI
 
-client = st.secrets["openai"]["client"]
+api_key = st.secrets["openai"]["client"]
+client = openai.OpenAI(api_key=api_key)
 
 
 st.title("📊 Upload e Análise de Artigo Científico")
