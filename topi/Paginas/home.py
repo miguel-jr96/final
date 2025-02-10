@@ -4,7 +4,7 @@ from PIL import Image
 st.title('📰 Revisor Literário!')
 
 
-st.image("final/topi/imagem/image_home.jpeg", width = 600)
+
 
 
 
