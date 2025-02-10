@@ -4,7 +4,8 @@ from PyPDF2 import PdfReader
 from pydantic import BaseModel
 from openai import OpenAI
 
-
+openai.api_key = st.secrets["openai"]["client"]
+client = openai.ChatCompletion
 
 st.title("📊 Upload e Análise de Artigo Científico")
 
