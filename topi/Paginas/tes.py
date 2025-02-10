@@ -6,6 +6,15 @@ from openai import OpenAI
 
 client = st.secrets["openai"]["api_key"]
 
+# Função para extrair texto de um PDF
+def extract_text_from_pdf(pdf_file):
+    pdf_reader = PdfReader(pdf_file)
+    text = ""
+    for page_num in range(len(pdf_reader.pages)):
+        page = pdf_reader.pages[page_num]
+        text += page.extract_text()
+    return text
+
 
 st.title("📊 Upload e Análise de Artigo Científico")
 
@@ -22,14 +31,6 @@ st.write("""
     - Resultados, implicações e lacunas identificadas.
 """)
 
-# Função para extrair texto de um PDF
-def extract_text_from_pdf(pdf_file):
-    pdf_reader = PdfReader(pdf_file)
-    text = ""
-    for page_num in range(len(pdf_reader.pages)):
-        page = pdf_reader.pages[page_num]
-        text += page.extract_text()
-    return text
 
 # Prompt para o modelo GPT
 prompt = '''
