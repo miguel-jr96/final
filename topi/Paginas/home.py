@@ -4,8 +4,8 @@ from PIL import Image
 st.title('📰 Revisor Literário!')
 
 
-imagem = st.image("topi/imagem/image_home.jpeg", width = 600)
-imagem
+st.image("topi/imagem/image_home.jpeg", width = 600)
+
 
 
 st.markdown(
