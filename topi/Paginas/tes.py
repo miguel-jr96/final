@@ -59,7 +59,7 @@ class ResumoArtigo(BaseModel):
 
 # Função para definir o modelo do gpt usado e para obter o resumo
 def obter_resumo_artigo(texto):
-    completacao = client.beta.chat.completions.parse(
+    completacao = api_key.beta.chat.completions.parse(
         model='gpt-4o-mini',
         messages=[
             {"role": "system", "content": prompt},
