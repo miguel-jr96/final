@@ -35,7 +35,7 @@ prompt = '''
     - Implicacoes: análise das implicações e relevância dos resultados no contexto da área
     - Lacunas: identificação de lacunas no estudo ou oportunidades para futuras pesquisas
 '''
-str(prompt)
+
 
 # Modelo de estrutura do artigo
 class ResumoArtigo(BaseModel):
@@ -81,7 +81,7 @@ if pdf_file:
 
     # Extrai o texto do PDF
     texto_extraido = extract_text_from_pdf(pdf_file)
-    str(texto_extraido)
+
     
     # Chama o modelo para análise
     with st.spinner("Analisando o conteúdo do artigo..."):
