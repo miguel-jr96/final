@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 from PyPDF2 import PdfReader
 from pydantic import BaseModel
-from openai import OpenAI
-
 
              
 
