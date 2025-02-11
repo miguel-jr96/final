@@ -4,7 +4,7 @@ import pandas as pd
 from PyPDF2 import PdfReader
 from pydantic import BaseModel
 
-client = st.secrets["openai"]["api_key"]
+openai.api_key = st.secrets["openai"]["api_key"]
 
 st.title("📊 Upload e Análise de Artigo Científico")
 
@@ -50,7 +50,7 @@ class ResumoArtigo(BaseModel):
 
 # Função para definir o modelo do gpt usado e para obter o resumo
 def obter_resumo_artigo(texto):
-    completacao = client.ChatCompletion.create(
+    completacao = openai.ChatCompletion.create(
         model='gpt-4o-mini',
         messages=[
             {"role": "system", "content": prompt},
