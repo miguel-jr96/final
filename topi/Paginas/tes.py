@@ -4,7 +4,7 @@ import pandas as pd
 from PyPDF2 import PdfReader
 from pydantic import BaseModel
 
-client = openai.OpenAI()
+
 
 st.title("📊 Upload e Análise de Artigo Científico")
 
