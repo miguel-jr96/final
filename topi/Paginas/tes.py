@@ -51,7 +51,7 @@ class ResumoArtigo(BaseModel):
 
 # Função para definir o modelo do gpt usado e para obter o resumo
 def obter_resumo_artigo(texto):
-    completacao = openai.ChatCompletion.create(
+    completacao = api_key.ChatCompletion.create(
         model='gpt-4',
         messages=[
             {"role": "system", "content": prompt},
