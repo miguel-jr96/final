@@ -1,4 +1,4 @@
-import OpenAI
+import openai
 import streamlit as st
 import pandas as pd
 from PyPDF2 import PdfReader
