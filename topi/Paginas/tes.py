@@ -38,7 +38,7 @@ prompt = '''
 
 # Modelo de estrutura do artigo
 class ResumoArtigo(BaseModel):
-    Ano: int
+    Ano: str
     Titulo: str
     Autores: list[str]
     Resumo: str
