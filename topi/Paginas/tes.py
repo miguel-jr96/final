@@ -4,8 +4,11 @@ from PyPDF2 import PdfReader
 from pydantic import BaseModel
 from openai import OpenAI
 
-
-
+if "openai" in st.secrets:
+    openai.api_key = st.secrets["openai"]["api_key"]
+else:
+    st.error("Chave da API da OpenAI
+             
 
 st.title("📊 Upload e Análise de Artigo Científico")
 
